@@ -1,0 +1,107 @@
+{
+ "name": "GPIO",
+ "type": "module",
+ "description": "Setup GPIO.",
+ "version": "0.0.1",
+ "homepage": "",
+ "files": ["GPIO.init","GPIO.info","GPIO.lua","GPIO.run","GPIO.html"],
+ "page": ["GPIO.html"],
+ "repository": {
+  "type": "git",
+  "url": "https://github.com/bondrogeen/GPIO"
+ },
+ "keywords": ["esp8266", "lua", "nodemcu", "GPIO"],
+ "author": {
+  "name": "bondrogeen",
+  "email": "bondrogeen@gmail.com"
+ },
+ "native": [
+ {
+   "id": "run",
+   "val": false,
+   "type": "checkbox",
+   "name": "Run"
+  }, {
+   "id": "0",
+   "val": "none",
+   "type": "select",
+   "values": ["none","input","input (pullup)","output"],
+   "name": "Pin 0 (GPIO16)"
+  }, {
+   "id": "1",
+   "val": "none",
+   "type": "select",
+   "values": ["none","input","input (pullup)","output"],
+   "name": "Pin 1 (GPIO5)"
+  }, {
+   "id": "2",
+   "val": "none",
+   "type": "select",
+   "values": ["none","input","input (pullup)","output"],
+   "name": "Pin 2 (GPIO4)"
+  }, {
+   "id": "3",
+   "val": "none",
+   "type": "select",
+   "values": ["none","input","input (pullup)","output"],
+   "name": "Pin 3 (GPIO0)"
+  }, {
+   "id": "4",
+   "val": "none",
+   "type": "select",
+   "values": ["none","input","input (pullup)","output"],
+   "name": "Pin 4 (GPIO2)"
+  }, {
+   "id": "5",
+   "val": "none",
+   "type": "select",
+   "values": ["none","input","input (pullup)","output"],
+   "name": "Pin 5 (GPIO14)"
+  }, {
+   "id": "6",
+   "val": "none",
+   "type": "select",
+   "values": ["none","input","input (pullup)","output"],
+   "name": "Pin 6 (GPIO12)"
+  }, {
+   "id": "7",
+   "val": "none",
+   "type": "select",
+   "values": ["none","input","input (pullup)","output"],
+   "name": "Pin 7 (GPIO13)"
+  }, {
+   "id": "8",
+   "val": "none",
+   "type": "select",
+   "values": ["none","input","input (pullup)","output"],
+   "name": "Pin 8 (GPIO15)"
+  }, {
+   "id": "9",
+   "val": "none",
+   "type": "select",
+   "values": ["none","input","input (pullup)","output"],
+   "name": "Pin 9 (GPIO3)"
+  }, {
+   "id": "10",
+   "val": "none",
+   "type": "select",
+   "values": ["none","input","input (pullup)","output"],
+   "name": "Pin 10 (GPIO1)"
+  }, {
+   "id": "11",
+   "val": "none",
+   "type": "select",
+   "values": ["none","input","input (pullup)","output"],
+   "name": "Pin 11 (GPIO9)"
+  }, {
+   "id": "12",
+   "val": "none",
+   "type": "select",
+   "values": ["none","input","input (pullup)","output"],
+   "name": "Pin 12 (GPIO10)"
+  }
+  ],
+ "license": "MIT",
+ "modules": ["file", "gpio", "sjson"]
+}
+  

@@ -1,0 +1,39 @@
+return function (t)
+ local r
+ if t.run then 
+  for k,v in pairs(t) do
+   if k~="run" then
+    local pin = tonumber(k)
+    if v=="output"then gpio.mode(pin,gpio.OUTPUT) gpio.write(pin, gpio.HIGH)end
+    if v=="input"then gpio.mode(pin,gpio.OUTPUT)end
+    print(k)
+    print(v)
+   end
+  end
+  print("END")
+-- r=dofile("GPIO.lua")(s)
+ end
+ return r
+end
+
+
+--function debounce (func,pin)
+--    local last = 0
+--    local delay = 200000
+--    return function (l,w,t)
+--        local now = tmr.now()
+--        if now - last < delay then return end
+--        last = now
+--        return func(l,w,t,pin)
+--    end
+--end
+--
+--function onChange (t,w,u,p)
+--    print(t,w,u,p)
+--    print('The pin value has changed to '..gpio.read(p))
+--end
+--
+--gpio.mode(4, gpio.INT)
+--gpio.trig(4, 'both', debounce(onChange,4))
+--gpio.mode(2, gpio.INT)
+--gpio.trig(2, 'both', debounce(onChange,2))

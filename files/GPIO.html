@@ -1,0 +1,105 @@
+!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <title>Web-server</title>
+ <link rel="stylesheet" href="style.css.gz" />
+ <style>
+  .cont {
+   margin-top: 1em;
+  }
+ </style>
+</head>
+
+<body>
+ <div class="cont">
+  <div class="row">
+   <div class="s12 m6 l4 of-l1">
+
+   </div>
+  </div>
+ </div>
+ <script>
+  var gpio_mute;
+  var gpio_power;
+  var run;
+  function send(page, data, callback) {
+   var req = new XMLHttpRequest();
+   req.open("POST", page, true);
+   req.setRequestHeader('Content-Type', 'application/json');
+   req.addEventListener("load", function() {
+    if (req.status < 400) {
+     callback(req.responseText);
+    } else {
+     callback(req.status);
+    }
+   });
+   req.send(JSON.stringify(data));
+  }
+
+//  function save(name, val) {
+//  console.log(name +  " : "  + val);
+//   var d={}
+//   d[name]=val;
+//   d.pin_p = gpio_power;
+//   d.pin_m = gpio_mute;
+//   send("TDA7313.lua", d, function(res) {
+//    console.log(res);
+//   });
+//  }
+//
+//  function getSettings(info){
+//    console.log(info);
+//    gpio_power = info.pin_p;
+//    gpio_mute = info.pin_m;
+//    var list = ["input", "bass", "treble", "lr", "lf", "rf", "rr", "volume", "power", "mute"];
+//    list.forEach(function(item, i, arr) {
+//     console.log(item + " : " + info[item])
+//     if (item === "input" || item === "power" || item === "mute") {
+//      var input = document.getElementsByName(item);
+//      for (var i = 0; i < input.length; i++) {
+//       console.log(input[i].value);
+//       console.log(input[i].value == info[item]);
+//       if (input[i].value == info[item]) input[i].checked = "checked";
+//      }
+//     } else {
+//      document.getElementById(item).value = info[item];
+//     }
+//    });
+//  }
+//  function load(name, val, pin) {
+//   send("TDA7313.init", {}, function(res) {
+//    var info;
+//    try {
+//     info = JSON.parse(res);
+//    } catch (e) {
+//     console.log(e);
+//     return
+//    }
+//    if (!info.run){
+//     run = confirm("The module is not started !!! run?");
+//     if (run){
+//     }
+//    }else{
+//     getSettings(info)
+//    }
+//   });
+//  }
+//
+//  load();
+
+  function nav() {
+   var x = document.getElementById("myTopnav");
+   if (x.classList.contains("res")) {
+    x.classList.remove('res');
+   } else {
+    x.classList.add('res');
+   }
+  }
+
+ </script>
+</body>
+
+</html>
